@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Charan Media — Download MP3 audio and MP4 video from YouTube, Instagram, WhatsApp, Facebook and more.">
+    <title>Charan Media | Video &amp; Audio Downloader</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ========================= HEADER ========================== -->
+    <header class="header">
+        <a href="#home" class="logo-link">
+            <div class="logo"><span>CHARAN</span> MEDIA</div>
+        </a>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#platforms">Platforms</a>
+            <a href="#downloader">Downloader</a>
+            <a href="#about">About</a>
+        </nav>
+        <div id="serverBadge" class="server-badge">
+            <span class="badge-dot"></span>
+            <span id="badgeText">Connecting…</span>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ========================= HERO ========================== -->
+        <section id="home" class="hero">
+            <div class="hero-bg-glow"></div>
+            <div class="hero-content">
+                <p class="small-title">CHARAN MEDIA</p>
+                <h1>Video &amp; Audio<br><span>Downloader</span></h1>
+                <p class="hero-description">
+                    Copy a link. Paste it. Choose MP3 or MP4.<br>
+                    Download in seconds — YouTube, Instagram, WhatsApp, Facebook and more.
+                </p>
+                <div class="hero-actions">
+                    <a href="#downloader" class="hero-button btn-primary" id="heroStartBtn">Start Downloading</a>
+                    <a href="#platforms" class="hero-button btn-ghost" id="heroPlatformsBtn">Browse Platforms</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat"><span>4+</span>
+                        <p>Platforms</p>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat"><span>MP3</span>
+                        <p>Audio</p>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat"><span>MP4</span>
+                        <p>Video</p>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat"><span>100%</span>
+                        <p>Legal Use</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ========================= HOW IT WORKS ========================== -->
+        <section class="how-it-works">
+            <p class="small-title">HOW IT WORKS</p>
+            <h2>Simple <span>4-Step</span> Process</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-num">1</div>
+                    <div class="step-icon">📋</div>
+                    <h3>Copy Link</h3>
+                    <p>Copy the URL of content you are authorized to download.</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step-card">
+                    <div class="step-num">2</div>
+                    <div class="step-icon">📌</div>
+                    <h3>Paste Link</h3>
+                    <p>Paste the URL into the Charan Media downloader below.</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step-card">
+                    <div class="step-num">3</div>
+                    <div class="step-icon">🔍</div>
+                    <h3>Analyze</h3>
+                    <p>Click Analyze Link to detect the platform and available formats.</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step-card">
+                    <div class="step-num">4</div>
+                    <div class="step-icon">⬇️</div>
+                    <h3>Download</h3>
+                    <p>Choose MP3 audio or MP4 video — independently.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ========================= PLATFORM CARDS ========================== -->
+        <section id="platforms" class="platforms-section">
+            <p class="small-title">SUPPORTED PLATFORMS</p>
+            <h2>Choose Your <span>Platform</span></h2>
+            <p class="section-desc">Select a platform to open its dedicated downloader, or use the Universal Downloader
+                below.</p>
+
+            <div class="platforms-grid">
+
+                <!-- YouTube -->
+                <div class="platform-card" data-platform="youtube">
+                    <div class="platform-card-glow"></div>
+                    <div class="platform-icon yt-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32" aria-hidden="true">
+                            <path
+                                d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.6 3.6 12 3.6 12 3.6s-7.6 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.8.5 9.4.5 9.4.5s7.6 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.8 15.5V8.5l6.2 3.5-6.2 3.5z" />
+                        </svg>
+                    </div>
+                    <div class="platform-info">
+                        <h3>YouTube</h3>
+                        <p>YouTube Video &amp; Audio Downloader</p>
+                    </div>
+                    <div class="platform-actions">
+                        <button class="btn-mp3" onclick="openDownloader('youtube','mp3')" id="yt-mp3-btn">🎵 MP3
+                            Audio</button>
+                        <button class="btn-mp4" onclick="openDownloader('youtube','mp4')" id="yt-mp4-btn">🎬 MP4
+                            Video</button>
+                        <button class="btn-open" onclick="openDownloader('youtube','both')" id="yt-open-btn">Open
+                            Tool</button>
+                    </div>
+                </div>
+
+                <!-- Instagram -->
+                <div class="platform-card" data-platform="instagram">
+                    <div class="platform-card-glow ig-glow"></div>
+                    <div class="platform-icon ig-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32" aria-hidden="true">
+                            <path
+                                d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8 0 3.2 0 3.6-.1 4.8-.1 3.2-1.6 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1-3.2 0-3.6 0-4.8-.1-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12c0-3.2 0-3.6.1-4.8.1-3.2 1.6-4.8 4.9-4.9 1.2-.1 1.6-.1 4.8-.1zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12c0 3.3 0 3.7.1 4.9.2 4.4 2.6 6.8 7 7C8.3 24 8.7 24 12 24c3.3 0 3.7 0 4.9-.1 4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9 0-3.3 0-3.7-.1-4.9C23.7 2.7 21.3.3 16.9.1 15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4A6.2 6.2 0 0 0 12 5.8zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8z" />
+                        </svg>
+                    </div>
+                    <div class="platform-info">
+                        <h3>Instagram</h3>
+                        <p>Instagram Video &amp; Audio Downloader</p>
+                    </div>
+                    <div class="platform-actions">
+                        <button class="btn-mp3" onclick="openDownloader('instagram','mp3')" id="ig-mp3-btn">🎵 MP3
+                            Audio</button>
+                        <button class="btn-mp4" onclick="openDownloader('instagram','mp4')" id="ig-mp4-btn">🎬 MP4
+                            Video</button>
+                        <button class="btn-open" onclick="openDownloader('instagram','both')" id="ig-open-btn">Open
+                            Tool</button>
+                    </div>
+                </div>
+
+                <!-- WhatsApp -->
+                <div class="platform-card" data-platform="whatsapp">
+                    <div class="platform-card-glow wa-glow"></div>
+                    <div class="platform-icon wa-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32" aria-hidden="true">
+                            <path
+                                d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.2-.5s-.6-1.4-.8-2c-.2-.5-.4-.5-.7-.5h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1 0 1.2.9 2.4 1 2.6.1.2 1.7 2.6 4.1 3.6.6.3 1 .4 1.4.5.6.2 1.1.1 1.5-.1.5-.3 1.4-1.1 1.6-1.3.2-.2.2-.4.1-.5-.1-.1-.4-.2-.7-.3zM12 2A10 10 0 0 0 2 12c0 1.8.5 3.5 1.3 5L2 22l5.3-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3.1.8.8-3-.2-.3A8 8 0 1 1 12 20z" />
+                        </svg>
+                    </div>
+                    <div class="platform-info">
+                        <h3>WhatsApp</h3>
+                        <p>WhatsApp Media Downloader</p>
+                    </div>
+                    <div class="platform-actions">
+                        <button class="btn-mp3" onclick="openDownloader('whatsapp','mp3')" id="wa-mp3-btn">🎵 MP3
+                            Audio</button>
+                        <button class="btn-mp4" onclick="openDownloader('whatsapp','mp4')" id="wa-mp4-btn">🎬 MP4
+                            Video</button>
+                        <button class="btn-open" onclick="openDownloader('whatsapp','both')" id="wa-open-btn">Open
+                            Tool</button>
+                    </div>
+                </div>
+
+                <!-- Facebook -->
+                <div class="platform-card" data-platform="facebook">
+                    <div class="platform-card-glow fb-glow"></div>
+                    <div class="platform-icon fb-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32" aria-hidden="true">
+                            <path
+                                d="M24 12.1C24 5.4 18.6 0 12 0S0 5.4 0 12.1C0 18.1 4.4 23.1 10.1 24v-8.4H7.1v-3.5h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2V8h-1.5c-1.5 0-2 .9-2 1.9v2.2h3.3l-.5 3.5h-2.8V24C19.6 23.1 24 18.1 24 12.1z" />
+                        </svg>
+                    </div>
+                    <div class="platform-info">
+                        <h3>Facebook</h3>
+                        <p>Facebook Video &amp; Audio Downloader</p>
+                    </div>
+                    <div class="platform-actions">
+                        <button class="btn-mp3" onclick="openDownloader('facebook','mp3')" id="fb-mp3-btn">🎵 MP3
+                            Audio</button>
+                        <button class="btn-mp4" onclick="openDownloader('facebook','mp4')" id="fb-mp4-btn">🎬 MP4
+                            Video</button>
+                        <button class="btn-open" onclick="openDownloader('facebook','both')" id="fb-open-btn">Open
+                            Tool</button>
+                    </div>
+                </div>
+
+                <!-- Other -->
+                <div class="platform-card platform-card-other" data-platform="other">
+                    <div class="platform-card-glow other-glow"></div>
+                    <div class="platform-icon other-icon">🌐</div>
+                    <div class="platform-info">
+                        <h3>Other</h3>
+                        <p>More Video &amp; Audio Tools — Expandable</p>
+                    </div>
+                    <div class="platform-actions">
+                        <button class="btn-mp3" onclick="openDownloader('other','mp3')" id="other-mp3-btn">🎵 MP3
+                            Audio</button>
+                        <button class="btn-mp4" onclick="openDownloader('other','mp4')" id="other-mp4-btn">🎬 MP4
+                            Video</button>
+                        <button class="btn-open" onclick="openDownloader('other','both')" id="other-open-btn">Open
+                            Tool</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ========================= DEDICATED DOWNLOADER ========================== -->
+        <section id="downloader" class="downloader-section">
+            <p class="small-title">UNIVERSAL DOWNLOADER</p>
+            <h2>Paste &amp; <span>Download</span></h2>
+
+            <div class="downloader-card">
+
+                <!-- Platform tabs -->
+                <div class="platform-tabs" role="tablist" aria-label="Select Platform">
+                    <button class="tab-btn active" data-tab="youtube" onclick="selectTab('youtube')" id="tab-youtube"
+                        role="tab" aria-selected="true">▶ YouTube</button>
+                    <button class="tab-btn" data-tab="instagram" onclick="selectTab('instagram')" id="tab-instagram"
+                        role="tab" aria-selected="false">◆ Instagram</button>
+                    <button class="tab-btn" data-tab="whatsapp" onclick="selectTab('whatsapp')" id="tab-whatsapp"
+                        role="tab" aria-selected="false">💬 WhatsApp</button>
+                    <button class="tab-btn" data-tab="facebook" onclick="selectTab('facebook')" id="tab-facebook"
+                        role="tab" aria-selected="false">f Facebook</button>
+                    <button class="tab-btn" data-tab="other" onclick="selectTab('other')" id="tab-other" role="tab"
+                        aria-selected="false">🌐 Other</button>
+                </div>
+
+                <div class="downloader-platform-label">
+                    <span id="platformLabel">YouTube Video &amp; Audio Downloader</span>
+                </div>
+
+                <!-- URL Input -->
+                <div class="url-input-group">
+                    <label for="mediaUrl">Paste your link here</label>
+                    <div class="url-input-wrapper">
+                        <span class="url-icon">🔗</span>
+                        <input type="url" id="mediaUrl" name="url" placeholder="https://www.youtube.com/watch?v=..."
+                            autocomplete="url" spellcheck="false">
+                        <button type="button" id="pasteBtn" onclick="pasteFromClipboard()">📋 Paste</button>
+                    </div>
+                </div>
+
+                <!-- Download Type Selector -->
+                <div class="download-type-selector">
+                    <div class="type-card type-audio" id="typeAudio" onclick="selectType('mp3')" role="button"
+                        tabindex="0" aria-pressed="false">
+                        <div class="type-icon">🎵</div>
+                        <div class="type-info">
+                            <h4>Audio Download</h4>
+                            <p>MP3 · Extract audio track</p>
+                        </div>
+                        <div class="type-check" id="checkAudio"></div>
+                    </div>
+                    <div class="type-card type-video" id="typeVideo" onclick="selectType('mp4')" role="button"
+                        tabindex="0" aria-pressed="false">
+                        <div class="type-icon">🎬</div>
+                        <div class="type-info">
+                            <h4>Video Download</h4>
+                            <p>MP4 · Download video file</p>
+                        </div>
+                        <div class="type-check" id="checkVideo"></div>
+                    </div>
+                </div>
+
+                <!-- Analyze Button -->
+                <button type="button" id="analyzeBtn" class="analyze-button" onclick="analyzeLink()">
+                    🔍 Analyze Link
+                </button>
+
+                <!-- Status -->
+                <div id="analyzeStatus" class="analyze-status"></div>
+
+                <!-- Media Info Panel -->
+                <div id="mediaInfo" class="media-info hidden">
+                    <div class="media-info-inner">
+                        <div class="media-thumb-wrap">
+                            <img id="mediaThumbnail" src="" alt="Media thumbnail" class="media-thumb">
+                            <div class="media-thumb-placeholder hidden" id="thumbPlaceholder">🎬</div>
+                        </div>
+                        <div class="media-details">
+                            <div class="media-badge" id="platformBadge">YouTube</div>
+                            <h3 id="mediaTitle" class="media-title">Loading…</h3>
+                            <div class="media-meta">
+                                <span id="mediaDuration">⏱ —</span>
+                                <span id="mediaFormats">📁 MP3, MP4</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quality Panel -->
+                <div id="qualityPanel" class="quality-panel hidden">
+                    <div class="quality-row" id="audioQualityRow">
+                        <label for="audioQuality">🎵 Audio Quality</label>
+                        <select id="audioQuality">
+                            <option value="128k">128 kbps</option>
+                            <option value="192k" selected>192 kbps (Recommended)</option>
+                            <option value="256k">256 kbps</option>
+                            <option value="320k">320 kbps</option>
+                        </select>
+                    </div>
+                    <div class="quality-row" id="videoQualityRow">
+                        <label for="videoQuality">🎬 Video Quality</label>
+                        <select id="videoQuality">
+                            <option value="360p">360p</option>
+                            <option value="480p">480p</option>
+                            <option value="720p" selected>720p HD (Recommended)</option>
+                            <option value="1080p">1080p Full HD</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Download Buttons -->
+                <div id="downloadButtons" class="download-buttons hidden">
+                    <button type="button" id="downloadMp3Btn" class="dl-btn dl-mp3" onclick="triggerDownload('mp3')">
+                        🎵 Download MP3
+                    </button>
+                    <button type="button" id="downloadMp4Btn" class="dl-btn dl-mp4" onclick="triggerDownload('mp4')">
+                        🎬 Download MP4
+                    </button>
+                </div>
+
+                <!-- Download progress/status -->
+                <div id="downloadStatus" class="download-status hidden"></div>
+
+                <!-- Result Links -->
+                <div id="downloadResult" class="download-result hidden">
+                    <div class="result-row" id="mp3Result">
+                        <div class="result-icon">🎵</div>
+                        <div class="result-info">
+                            <p>MP3 Audio ready</p>
+                            <audio id="audioPreview" controls class="audio-player"></audio>
+                        </div>
+                        <a id="mp3DownloadLink" href="#" class="result-dl-btn">⬇ Download MP3</a>
+                    </div>
+                    <div class="result-row hidden" id="mp4Result">
+                        <div class="result-icon">🎬</div>
+                        <div class="result-info">
+                            <p>MP4 Video ready</p>
+                        </div>
+                        <a id="mp4DownloadLink" href="#" class="result-dl-btn result-dl-mp4">⬇ Download MP4</a>
+                    </div>
+                </div>
+
+                <!-- Local file fallback -->
+                <div class="local-file-section">
+                    <div class="divider-text">or convert a local file</div>
+                    <label for="localFile" id="uploadArea" class="upload-area">
+                        <div class="upload-icon">📁</div>
+                        <h3 id="fileLabel">Choose a video file</h3>
+                        <p>Drag &amp; drop or click — MP4, MOV, WebM, MKV</p>
+                        <span class="browse-text">Browse File</span>
+                    </label>
+                    <input type="file" id="localFile" name="file" accept="video/*">
+                    <div class="form-group" style="margin-top:16px;">
+                        <label for="quality">MP3 Quality (local file)</label>
+                        <select id="quality">
+                            <option value="128k">128 kbps</option>
+                            <option value="192k" selected>192 kbps</option>
+                            <option value="320k">320 kbps</option>
+                        </select>
+                    </div>
+                    <button type="button" id="convertBtn" class="convert-button" onclick="convertLocalFile()">
+                        Convert Local File to MP3
+                    </button>
+                    <div id="status" class="status"></div>
+                    <div id="result" class="result hidden">
+                        <div class="success-icon">✓</div>
+                        <h3>Conversion Complete</h3>
+                        <p>Your MP3 file is ready.</p>
+                        <div class="audio-player-container">
+                            <audio id="localAudioPreview" controls class="audio-player"></audio>
+                        </div>
+                        <a id="downloadLink" href="#" class="download-button">Download MP3</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ========================= FEATURES ========================== -->
+        <section class="features">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Fast Downloads</h3>
+                <p>Powered by FFmpeg and yt-dlp for blazing-fast processing.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎵</div>
+                <h3>Separate Audio &amp; Video</h3>
+                <p>Download MP3 or MP4 independently — no forced bundles.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🧩</div>
+                <h3>Modular Platforms</h3>
+                <p>Each platform has its own handler. Easily add new ones.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Legal &amp; Secure</h3>
+                <p>Only process content you are authorized to download.</p>
+            </div>
+        </section>
+
+
+        <!-- ========================= ABOUT ========================== -->
+        <section id="about" class="about">
+            <p class="small-title">ABOUT CHARAN MEDIA</p>
+            <h2>Modular <span>Media Tools</span></h2>
+            <p>
+                Charan Media is a full-stack media downloader built with HTML, CSS, JavaScript,
+                Python FastAPI, FFmpeg and yt-dlp. Each platform has its own modular handler —
+                validator, detector, processor and formatter — managed by a central Platform Manager.
+                New platforms can be added without touching existing code.
+            </p>
+            <div class="arch-diagram">
+                <div class="arch-node arch-url">URL Input</div>
+                <div class="arch-arrow-down">↓</div>
+                <div class="arch-node arch-manager">Platform Manager</div>
+                <div class="arch-arrow-down">↓</div>
+                <div class="arch-platforms-row">
+                    <div class="arch-node arch-platform">YouTube</div>
+                    <div class="arch-node arch-platform">Instagram</div>
+                    <div class="arch-node arch-platform">WhatsApp</div>
+                    <div class="arch-node arch-platform">Facebook</div>
+                    <div class="arch-node arch-platform">Other</div>
+                </div>
+                <div class="arch-arrow-down">↓</div>
+                <div class="arch-row">
+                    <div class="arch-node arch-mp3">🎵 MP3</div>
+                    <div class="arch-node arch-mp4">🎬 MP4</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ========================= FOOTER ========================== -->
+    <footer class="footer">
+        <div class="logo"><span>CHARAN</span> MEDIA</div>
+        <p class="footer-legal">Only download content you are authorized to access. Respect copyright and platform
+            terms.</p>
+        <p class="footer-copy">© 2026 Charan Media. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/lamejs@1.2.1/lame.min.js"></script>
+    <script src="script.js" defer></script>
+
+</body>
+
+</html>
