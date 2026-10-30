@@ -1,4 +1,4 @@
-﻿// =========================================
+// =========================================
 // CHARAN MEDIA — Video & Audio Downloader
 // Modular Platform Architecture
 // =========================================
@@ -290,7 +290,8 @@ async function analyzeLink() {
     try {
         const base = await getServerBase();
         if (!base) {
-            throw new Error('Conversion server is not running. Start the server first.');
+            updateServerBadge();
+            throw new Error('Conversion server is not running. Please start it using start_server.bat or run.bat (http://127.0.0.1:8000).');
         }
 
         const formData = new FormData();
@@ -379,7 +380,21 @@ async function analyzeLink() {
 // SERVER BASE DISCOVERY
 // ─────────────────────────────────────────
 
-async function getServerBase() {
+let cachedServerBase = null;
+
+async function getServerBase(forceCheck = false) {
+    if (cachedServerBase && !forceCheck) {
+        try {
+            const ctrl = new AbortController();
+            const tid = setTimeout(() => ctrl.abort(), 1200);
+            const r = await fetch(`${cachedServerBase}/health`, { signal: ctrl.signal });
+            clearTimeout(tid);
+            if (r.ok) return cachedServerBase;
+        } catch {
+            cachedServerBase = null;
+        }
+    }
+
     const candidates = [];
     if (window.location.origin && window.location.origin.startsWith('http')) {
         candidates.push(window.location.origin);
@@ -390,13 +405,40 @@ async function getServerBase() {
     for (const base of unique) {
         try {
             const ctrl = new AbortController();
-            const tid = setTimeout(() => ctrl.abort(), 3000);
+            const tid = setTimeout(() => ctrl.abort(), 2000);
             const r = await fetch(`${base.replace(/\/$/, '')}/health`, { signal: ctrl.signal });
             clearTimeout(tid);
-            if (r.ok) return base.replace(/\/$/, '');
+            if (r.ok) {
+                cachedServerBase = base.replace(/\/$/, '');
+                return cachedServerBase;
+            }
         } catch { /* keep trying */ }
     }
+    cachedServerBase = null;
     return null;
+}
+
+async function updateServerBadge() {
+    const badge = $('serverBadge');
+    const text = $('badgeText');
+    if (!badge || !text) return;
+
+    try {
+        const base = await getServerBase();
+        if (base) {
+            badge.classList.remove('offline');
+            badge.classList.add('online');
+            text.textContent = 'Server Online';
+        } else {
+            badge.classList.remove('online');
+            badge.classList.add('offline');
+            text.textContent = 'Server Offline';
+        }
+    } catch {
+        badge.classList.remove('online');
+        badge.classList.add('offline');
+        text.textContent = 'Server Offline';
+    }
 }
 
 // ─────────────────────────────────────────
@@ -421,7 +463,10 @@ async function triggerDownload(type) {
 
     try {
         const base = await getServerBase();
-        if (!base) throw new Error('Server not running. Start the conversion server.');
+        if (!base) {
+            updateServerBadge();
+            throw new Error('Server is not running. Please start it using start_server.bat or run.bat (http://127.0.0.1:8000).');
+        }
 
         const endpoint = type === 'mp3' ? '/download-mp3' : '/download-mp4';
         const formData = new FormData();
@@ -834,3 +879,7 @@ function encodePcmToWav(audioBuffer) {
 
 // Set initial platform tab state
 selectTab('youtube');
+
+// Check server status on startup and keep badge updated
+updateServerBadge();
+setInterval(updateServerBadge, 8000);

@@ -12,3 +12,6 @@ ENV/
 # Media folders
 downloads/
 uploads/
+
+# IDE
+.vscode/

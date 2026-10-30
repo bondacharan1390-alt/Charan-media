@@ -1,4 +1,4 @@
-﻿/* =========================================
+/* =========================================
    CHARAN MEDIA — Video & Audio Downloader
    Complete Redesign 2026
 ========================================= */
@@ -118,6 +118,17 @@ button, select, input { font-family: inherit; }
 @keyframes pulse-dot {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.5; }
+}
+
+.server-badge.offline {
+    background: rgba(248, 113, 113, 0.08);
+    border-color: rgba(248, 113, 113, 0.25);
+    color: #f87171;
+}
+
+.server-badge.offline .badge-dot {
+    background: #f87171;
+    box-shadow: 0 0 8px rgba(248, 113, 113, 0.6);
 }
 
 

@@ -329,10 +329,12 @@ async def download_mp4(url: str = Form(...), quality: str = Form("720p")):
 
     # Map quality label to yt-dlp format selector
     quality_map = {
-        "360p": "bestvideo[height<=360][ext=mp4]+bestaudio[ext=m4a]/best[height<=360][ext=mp4]/best[height<=360]",
-        "480p": "bestvideo[height<=480][ext=mp4]+bestaudio[ext=m4a]/best[height<=480][ext=mp4]/best[height<=480]",
-        "720p": "bestvideo[height<=720][ext=mp4]+bestaudio[ext=m4a]/best[height<=720][ext=mp4]/best[height<=720]",
-        "1080p": "bestvideo[height<=1080][ext=mp4]+bestaudio[ext=m4a]/best[height<=1080][ext=mp4]/best",
+        "360p": "bestvideo[height<=360][ext=mp4]+bestaudio[ext=m4a]/bestvideo[height<=360]+bestaudio/best[height<=360]",
+        "480p": "bestvideo[height<=480][ext=mp4]+bestaudio[ext=m4a]/bestvideo[height<=480]+bestaudio/best[height<=480]",
+        "720p": "bestvideo[height<=720][ext=mp4]+bestaudio[ext=m4a]/bestvideo[height<=720]+bestaudio/best[height<=720]/best",
+        "1080p": "bestvideo[height<=1080][ext=mp4]+bestaudio[ext=m4a]/bestvideo[height<=1080]+bestaudio/best[height<=1080]/best",
+        "1440p": "bestvideo[height<=1440]+bestaudio/best[height<=1440]/best",
+        "2160p": "bestvideo[height<=2160]+bestaudio/best[height<=2160]/best",
     }
     fmt = quality_map.get(quality, quality_map["720p"])
 
@@ -347,7 +349,7 @@ async def download_mp4(url: str = Form(...), quality: str = Form("720p")):
             "format": fmt,
             "outtmpl": output_template,
             "ffmpeg_location": ffmpeg_path,
-            "max_filesize": 1024 * 1024 * 1024,  # 1 GB
+            "max_filesize": 4 * 1024 * 1024 * 1024,  # 4 GB for 1440p/4K
             "merge_output_format": "mp4",
         })
 

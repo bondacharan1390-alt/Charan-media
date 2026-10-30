@@ -1,0 +1,325 @@
+{
+  "knowledge_items": [
+    {
+      "id": "cdb1f77d6e",
+      "title": "Charan Media Platform Architecture",
+      "content": "Charan Media is a multi-platform audio/video processing suite built with FastAPI, Python, FFmpeg, and yt-dlp. It provides independent high-speed MP3 audio extraction and MP4 video streaming across YouTube, Instagram, WhatsApp, Facebook, Vimeo and more. Its frontend features clean HTML5, CSS3, and JavaScript with modular platform handlers.",
+      "category": "Technology",
+      "tags": [
+        "charan-media",
+        "fastapi",
+        "audio-mp3",
+        "video-mp4",
+        "architecture"
+      ],
+      "source": "Project Documentation",
+      "created_at": "2026-10-08T06:30:46.386640+00:00",
+      "updated_at": "2026-10-08T06:30:46.386640+00:00",
+      "version": 1,
+      "status": "current",
+      "owner": "Charan",
+      "permissions": "shared",
+      "history": []
+    },
+    {
+      "id": "de36f543a9",
+      "title": "Global Capital Cities and Geopolitics",
+      "content": "Key world capitals: Japan: Tokyo; United States: Washington, D.C.; India: New Delhi; United Kingdom: London; Germany: Berlin; France: Paris; Australia: Canberra; Brazil: Brasília; Canada: Ottawa; South Africa: Pretoria (administrative), Cape Town (legislative), Bloemfontein (judicial).",
+      "category": "Geography",
+      "tags": [
+        "world",
+        "geography",
+        "capitals",
+        "countries"
+      ],
+      "source": "World Atlas",
+      "created_at": "2026-10-08T06:30:46.386640+00:00",
+      "updated_at": "2026-10-08T06:30:46.386640+00:00",
+      "version": 1,
+      "status": "current",
+      "owner": "Charan",
+      "permissions": "shared",
+      "history": []
+    },
+    {
+      "id": "946b82de60",
+      "title": "Machine Learning & Neural Network Foundations",
+      "content": "Retrieval-Augmented Generation (RAG) combines dense/sparse vector retrieval with generative large language models like Google Gemini. It ensures factual grounding, eliminates hallucinations, and restricts external context window usage to only relevant chunks.",
+      "category": "Artificial Intelligence",
+      "tags": [
+        "ai",
+        "transformers",
+        "gemini",
+        "deep-learning",
+        "rag"
+      ],
+      "source": "AI Engineering Standards",
+      "created_at": "2026-10-08T06:30:46.386640+00:00",
+      "updated_at": "2026-10-08T06:30:46.386640+00:00",
+      "version": 1,
+      "status": "current",
+      "owner": "Charan",
+      "permissions": "shared",
+      "history": []
+    },
+    {
+      "id": "363adffd19",
+      "title": "Business Project Blueprint & Agile Planning",
+      "content": "Core project lifecycle: 1. Initiation & Goal Scoping (OKRs); 2. Discovery & Requirement Analysis; 3. Sprint Architecture & Iterative Delivery; 4. Quality Assurance & Stakeholder Review; 5. Production Deployment, Monitoring, and Continuous Feedback.",
+      "category": "Business & Management",
+      "tags": [
+        "project-management",
+        "agile",
+        "kpi",
+        "milestones"
+      ],
+      "source": "Operations Manual",
+      "created_at": "2026-10-08T06:30:46.386640+00:00",
+      "updated_at": "2026-10-08T06:30:46.386640+00:00",
+      "version": 1,
+      "status": "current",
+      "owner": "Charan",
+      "permissions": "shared",
+      "history": []
+    }
+  ],
+  "documents": [
+    {
+      "id": "70500d19d7",
+      "filename": "biodiversity_report.txt",
+      "file_type": "TXT",
+      "size_bytes": 276,
+      "uploaded_at": "2026-10-08T06:40:50.442146+00:00",
+      "chunk_count": 1,
+      "preview": "Title: Global Biodiversity Report 2026\n\nSection 1: Marine Ecosystems\nCoral reefs harbor 25% of all marine life despite covering less than 1% of the ocean floor.\n\nSection 2: Rainforest Conservation\nTropics hold over 50% of terrestrial species and regulate global precipitation.",
+      "full_text": "Title: Global Biodiversity Report 2026\n\nSection 1: Marine Ecosystems\nCoral reefs harbor 25% of all marine life despite covering less than 1% of the ocean floor.\n\nSection 2: Rainforest Conservation\nTropics hold over 50% of terrestrial species and regulate global precipitation."
+    }
+  ],
+  "document_chunks": [
+    {
+      "chunk_id": "70500d19d7_0",
+      "doc_id": "70500d19d7",
+      "doc_name": "biodiversity_report.txt",
+      "text": "Title: Global Biodiversity Report 2026\n\nSection 1: Marine Ecosystems\nCoral reefs harbor 25% of all marine life despite covering less than 1% of the ocean floor.\n\nSection 2: Rainforest Conservation\nTropics hold over 50% of terrestrial species and regulate global precipitation.",
+      "word_count": 41,
+      "index": 0
+    }
+  ],
+  "chat_sessions": [
+    {
+      "id": "bebe7c08f638",
+      "title": "What is the capital of Japan?",
+      "created_at": "2026-10-08T06:59:34.392772+00:00",
+      "updated_at": "2026-10-08T06:59:39.433032+00:00",
+      "messages": [
+        {
+          "id": "dbdfb0e9",
+          "role": "user",
+          "content": "What is the capital of Japan?",
+          "timestamp": "2026-10-08T06:59:39.427091+00:00",
+          "sources": [],
+          "image_url": null,
+          "mode": "general"
+        },
+        {
+          "id": "2f1870c6",
+          "role": "assistant",
+          "content": "Tokyo.",
+          "timestamp": "2026-10-08T06:59:39.433032+00:00",
+          "sources": [
+            "Global Capital Cities and Geopolitics",
+            "Charan Media Platform Architecture",
+            "biodiversity_report.txt"
+          ],
+          "image_url": null,
+          "mode": "general"
+        }
+      ]
+    },
+    {
+      "id": "5cb45b37bc27",
+      "title": "New Conversation",
+      "created_at": "2026-10-08T06:40:50.442146+00:00",
+      "updated_at": "2026-10-08T06:40:50.442146+00:00",
+      "messages": [
+        {
+          "id": "c51f52aa",
+          "role": "assistant",
+          "content": "**According to your uploaded document (biodiversity_report.txt):**\n\nTitle: Global Biodiversity Report 2026\n\nSection 1: Marine Ecosystems\nCoral reefs harbor 25% of all marine life despite covering less than 1% of the ocean floor.\n\nSection 2: Rainforest Conservation\nTropics hold over 50% of terrestrial species and regulate global precipitation.\n\n*Source: [Document: biodiversity_report.txt (Part 0)]*",
+          "timestamp": "2026-10-08T06:40:50.442146+00:00",
+          "sources": [
+            "Machine Learning & Neural Network Foundations",
+            "biodiversity_report.txt"
+          ],
+          "image_url": null,
+          "mode": "general"
+        }
+      ]
+    },
+    {
+      "id": "c457da4c59bf",
+      "title": "According to my uploaded document, what ",
+      "created_at": "2026-10-08T06:40:50.442146+00:00",
+      "updated_at": "2026-10-08T06:40:50.442146+00:00",
+      "messages": [
+        {
+          "id": "50eb1531",
+          "role": "user",
+          "content": "According to my uploaded document, what percentage of marine life do coral reefs harbor?",
+          "timestamp": "2026-10-08T06:40:50.442146+00:00",
+          "sources": [],
+          "image_url": null,
+          "mode": "general"
+        }
+      ]
+    },
+    {
+      "id": "7e56f2244260",
+      "title": "New Conversation",
+      "created_at": "2026-10-08T06:40:33.055426+00:00",
+      "updated_at": "2026-10-08T06:40:33.057434+00:00",
+      "messages": [
+        {
+          "id": "475be895",
+          "role": "assistant",
+          "content": "**Based on your saved knowledge:**\n\nCharan Media is a multi-platform audio/video processing suite built with FastAPI, Python, FFmpeg, and yt-dlp. It provides independent high-speed MP3 audio extraction and MP4 video streaming across YouTube, Instagram, WhatsApp, Facebook, Vimeo and more. Its frontend features clean HTML5, CSS3, and JavaScript with modular platform handlers.\n\n*Source: [Saved Knowledge: Charan Media Platform Architecture]*",
+          "timestamp": "2026-10-08T06:40:33.057434+00:00",
+          "sources": [
+            "Charan Media Platform Architecture",
+            "Business Project Blueprint & Agile Planning"
+          ],
+          "image_url": null,
+          "mode": "general"
+        }
+      ]
+    },
+    {
+      "id": "83b82bd18550",
+      "title": "What did I save about Charan Media platf",
+      "created_at": "2026-10-08T06:40:33.053418+00:00",
+      "updated_at": "2026-10-08T06:40:33.055426+00:00",
+      "messages": [
+        {
+          "id": "49e5763b",
+          "role": "user",
+          "content": "What did I save about Charan Media platform architecture?",
+          "timestamp": "2026-10-08T06:40:33.055426+00:00",
+          "sources": [],
+          "image_url": null,
+          "mode": "general"
+        }
+      ]
+    },
+    {
+      "id": "6d98962f6c1f",
+      "title": "New Conversation",
+      "created_at": "2026-10-08T06:40:33.048391+00:00",
+      "updated_at": "2026-10-08T06:40:33.050856+00:00",
+      "messages": [
+        {
+          "id": "c9e50a22",
+          "role": "assistant",
+          "content": "Tokyo.",
+          "timestamp": "2026-10-08T06:40:33.050856+00:00",
+          "sources": [
+            "Global Capital Cities and Geopolitics",
+            "Charan Media Platform Architecture"
+          ],
+          "image_url": null,
+          "mode": "general"
+        }
+      ]
+    },
+    {
+      "id": "833a45e22aeb",
+      "title": "What is the capital of Japan?",
+      "created_at": "2026-10-08T06:40:33.046199+00:00",
+      "updated_at": "2026-10-08T06:40:33.048391+00:00",
+      "messages": [
+        {
+          "id": "ca37b0fa",
+          "role": "user",
+          "content": "What is the capital of Japan?",
+          "timestamp": "2026-10-08T06:40:33.048391+00:00",
+          "sources": [],
+          "image_url": null,
+          "mode": "general"
+        }
+      ]
+    }
+  ],
+  "activity_log": [
+    {
+      "id": "1242b546",
+      "action": "Deleted",
+      "title": "Mars Colonization Habitat Guidelines",
+      "category": "Science",
+      "details": "Permanently removed",
+      "timestamp": "2026-10-08T06:44:09.698450+00:00"
+    },
+    {
+      "id": "a1a3c2b2",
+      "action": "Version Restored",
+      "title": "Mars Colonization Habitat Guidelines",
+      "category": "Science",
+      "details": "Restored content from v1 as new v3",
+      "timestamp": "2026-10-08T06:44:09.688869+00:00"
+    },
+    {
+      "id": "d740f2f0",
+      "action": "Updated",
+      "title": "Mars Colonization Habitat Guidelines v2",
+      "category": "Science",
+      "details": "Bumped to v2: Switched from surface domes to subsurface lava tubes",
+      "timestamp": "2026-10-08T06:44:09.672322+00:00"
+    },
+    {
+      "id": "7c405893",
+      "action": "Created",
+      "title": "Mars Colonization Habitat Guidelines",
+      "category": "Science",
+      "details": "Version 1 created by User",
+      "timestamp": "2026-10-08T06:44:09.653883+00:00"
+    },
+    {
+      "id": "ca0dd121",
+      "action": "Document Uploaded",
+      "title": "biodiversity_report.txt",
+      "category": "Document Intelligence",
+      "details": "Extracted 41 words into 1 searchable chunks",
+      "timestamp": "2026-10-08T06:40:50.442146+00:00"
+    },
+    {
+      "id": "e0cd14c2",
+      "action": "Seed Created",
+      "title": "Business Project Blueprint & Agile Planning",
+      "category": "Business & Management",
+      "details": "Default seeded knowledge",
+      "timestamp": "2026-10-08T06:30:46.386640+00:00"
+    },
+    {
+      "id": "d717f1a7",
+      "action": "Seed Created",
+      "title": "Machine Learning & Neural Network Foundations",
+      "category": "Artificial Intelligence",
+      "details": "Default seeded knowledge",
+      "timestamp": "2026-10-08T06:30:46.386640+00:00"
+    },
+    {
+      "id": "47161c4c",
+      "action": "Seed Created",
+      "title": "Global Capital Cities and Geopolitics",
+      "category": "Geography",
+      "details": "Default seeded knowledge",
+      "timestamp": "2026-10-08T06:30:46.386640+00:00"
+    },
+    {
+      "id": "d0567573",
+      "action": "Seed Created",
+      "title": "Charan Media Platform Architecture",
+      "category": "Technology",
+      "details": "Default seeded knowledge",
+      "timestamp": "2026-10-08T06:30:46.386640+00:00"
+    }
+  ]
+}
